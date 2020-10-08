@@ -1,0 +1,93 @@
+
+{
+  "questions": [
+      {
+        "id": "1",
+        "question": "Bilbo is celebrating wich birthday at the begining of the first part of the Fellowship of the ring?",
+        "answers":["101", "100", "111"],
+        "correctAnswer": "111",
+        "difficultyLevel": "Expert",
+        "description": "111"
+      },
+      {
+        "id": "2",
+        "question": "How are Merry and Pippin related?",
+        "answers":["They are first cousins", "They are brothers", "They are second cousins"],
+        "correctAnswer": "They are first cousins",
+        "difficultyLevel": "Expert",
+        "description": "They are first cousins"
+      },
+      {
+        "id": "3",
+        "question": "What is Gollum’s name for the Sun?",
+        "answers":["Yellow Face", "My precious"],
+        "correctAnswer": "Yellow Face",
+        "difficultyLevel": "Expert",
+        "description": "Yellow Face"
+      },
+      {
+        "id": "4",
+        "question": "Gollum killed his brother for the one ring. What was his brother’s name?",
+        "answers":["Deagol", "Pippin", "Diagol"],
+        "correctAnswer": "Deagol",
+        "difficultyLevel": "Expert",
+        "description": "Deagol"
+      },
+      {
+        "id": "5",
+        "question": "How does Farmer Maggot keep people of his farm?",
+        "answers":["A pack of trained dogs", "Fence"],
+        "correctAnswer": "A pack of trained dogs",
+        "difficultyLevel": "Expert",
+        "description": "A pack of trained dogs"
+      },
+      {
+        "id": "6",
+        "question": "What river runs along the eastern border of the Shire?",
+        "answers":["River Anduin", "The Brandywine"],
+        "correctAnswer": "The Brandywine",
+        "difficultyLevel": "Expert",
+        "description": "The Brandywine"
+      },
+      {
+        "id": "7",
+        "question": "What kind of creatures are the spawns of Ungoliant?",
+        "answers":["Giant spiders", "Crebain - crow-like birds"],
+        "correctAnswer": "Giant spiders",
+        "difficultyLevel": "Expert",
+        "description": "Giant spiders"
+      },
+      {
+        "id": "8",
+        "question": "What are the Morgul-wounds?",
+        "answers":["Wounds inflicted by the Nazgûl", "Wounds inflicted by Uruk-hai"],
+        "correctAnswer": "Wounds inflicted by the Nazgûl",
+        "difficultyLevel": "Expert",
+        "description": "Wounds inflicted by the Nazgûl"
+      },
+      {
+        "id": "9",
+        "question": "What are the Palantíri and how many are there?",
+        "answers":["3 powerful rings given to the Elves","7 seeing stones","3 jewels made by Fëanor"],
+        "correctAnswer": "7 seeing stones",
+        "difficultyLevel": "Expert",
+        "description": "7 seeing stones"
+      },
+      {
+        "id": "10",
+        "question": "What was the name of Gandalf’s sword?",
+        "answers":["Andúril","Glamdring"],
+        "correctAnswer": "Glamdring",
+        "difficultyLevel": "Expert",
+        "description": "Glamdring"
+      },
+      {
+        "id": "11",
+        "question": "What is the first voice we hear in The Fellowship of the Ring?",
+        "answers":["Galadriel", "Frodo", "Arwen"],
+        "correctAnswer": "Galadriel",
+        "difficultyLevel": "Expert",
+        "description": "Galadriel"
+      }
+  ]
+}

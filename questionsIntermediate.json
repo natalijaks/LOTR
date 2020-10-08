@@ -1,0 +1,200 @@
+{
+  "questions": [
+      {
+        "id": "1",
+        "question": "How many 'Lord of the Rings' movie-parts exist?",
+        "answers":["One", "Two", "Three"],
+        "correctAnswer": "Three",
+        "difficultyLevel": "Intermediate",
+        "description": "The fellowship of the ring, The two towers, The return of the king"
+      },
+      {
+        "id": "2",
+        "question": "Who is Frodos hobbit-companion?",
+        "answers":["Aragorn", "Boromir", "Sam"],
+        "correctAnswer": "Sam",
+        "difficultyLevel": "Intermediate",
+        "description": "Samwise Gamgee"
+      },
+      {
+        "id": "3",
+        "question": "Is Gimly an Elf?",
+        "answers":["Yes", "No"],
+        "correctAnswer": "No",
+        "difficultyLevel": "Intermediate",
+        "description": "Gimli is a dwarf"
+      },
+      {
+        "id": "4",
+        "question": "What is the name of the Dark Lord?",
+        "answers":["Saruman", "Sauron", "Samwise"],
+        "correctAnswer": "Sauron",
+        "difficultyLevel": "Intermediate",
+        "description": "The dark lord is Sauron"
+      },
+      {
+        "id": "5",
+        "question": "Which item should Frodo destroy?",
+        "answers":["Ring", "Sword", "Goblet"],
+        "correctAnswer": "Ring",
+        "difficultyLevel": "Intermediate",
+        "description": "The ring of power"
+      },
+      {
+        "id": "6",
+        "question": "What is the name of the fictional world in which characters live?",
+        "answers":["Planetopia", "Middle-earth", "Neverland"],
+        "correctAnswer": "Middle-earth",
+        "difficultyLevel": "Intermediate",
+        "description": "Middle-earth is the name of the fictional world"
+      },
+      {
+        "id": "7",
+        "question": "The Lord of the Rings is an novel written by:",
+        "answers":["Peter Jackson", "J.R.R. Tolkien", "Elijah Wood"],
+        "correctAnswer": "J.R.R. Tolkien",
+        "difficultyLevel": "Intermediate",
+        "description": "Middle-earth is the name of the fictional world"
+      },
+      {
+        "id": "8",
+        "question": "What is the name of the Ent who befriends Merry and Pippin in Fanghorn forest?",
+        "answers":["Treebeard", "Twobeard", "Fimbrethil"],
+        "correctAnswer": "Treebeard",
+        "difficultyLevel": "Intermediate",
+        "description": "Treebeard"
+      },
+      {
+        "id": "9",
+        "question": "Who is the first member of the fellowship to be separated from the group?",
+        "answers":["Gandalf", "Boromir", "Pippin & Merry"],
+        "correctAnswer": "Gandalf",
+        "difficultyLevel": "Intermediate",
+        "description": "Gandalf"
+      },
+      {
+        "id": "10",
+        "question": "Who is the king of Rohan?",
+        "answers":["Denethor", "Théoden", "Aragorn"],
+        "correctAnswer": "Théoden",
+        "difficultyLevel": "Intermediate",
+        "description": "Théoden is the king of Rohan"
+      },
+      {
+        "id": "11",
+        "question": "Who said this: 'One does not simply walk into Mordor.'?",
+        "answers":["Elrond", "Gimli", "Boromir"],
+        "correctAnswer": "Boromir",
+        "difficultyLevel": "Intermediate",
+        "description": "Boromir said this one"
+      },
+      {
+        "id": "12",
+        "question": "Whom does Aragorn love?",
+        "answers":["Eowyn", "Galadriel", "Arwen"],
+        "correctAnswer": "Arwen",
+        "difficultyLevel": "Intermediate",
+        "description": "Aragorn loves Arwen"
+      },
+      {
+        "id": "13",
+        "question": "Who said, ”They will find you. They will take the ring. And you will beg for death before the end!”?",
+        "answers":["Boromir", "Faramir", "Gimli"],
+        "correctAnswer": "Boromir",
+        "difficultyLevel": "Intermediate",
+        "description": "Boromir said this one"
+      },
+      {
+        "id": "14",
+        "question": "Who is the first hobbit to get married?",
+        "answers":["Samwise", "Pippin", "Merry"],
+        "correctAnswer": "Samwise",
+        "difficultyLevel": "Intermediate",
+        "description": "Samwise is the first hobbit to get married"
+      },
+      {
+        "id": "15",
+        "question": "Samwise marries whom?",
+        "answers":["Rosie Cotton", "Lily Brown","Elanor Gardner"],
+        "correctAnswer": "Rosie Cotton",
+        "difficultyLevel": "Intermediate",
+        "description": "Sam marries Rosie Cotton, Lily Brown was Rosies mother, and Elanor Gardner was the daughter of Samwise and Rosie"
+      },
+      {
+        "id": "16",
+        "question": "How many members make up the fellowship of the ring?",
+        "answers":["7", "8", "9"],
+        "correctAnswer": "9",
+        "difficultyLevel": "Intermediate",
+        "description": "This fellowship of the ring consists of Frodo (and his fellow hobbits) Merry, Sam, and Pippin,(two Men) Aragorn and Boromir,  Legolas (Elf), Gimli (Dwarf) and Gandalf."
+      },
+      {
+        "id": "17",
+        "question": "How many Rings of Power were there, in total?",
+        "answers":["3", "7", "20"],
+        "correctAnswer": "20",
+        "difficultyLevel": "Intermediate",
+        "description": "Three Rings for the Elven-kings under the sky, Seven for the Dwarf-lords in their halls of stone, Nine for Mortal Men, doomed to die, One for the Dark Lord on his dark throne In the Land of Mordor where the Shadows lie. One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them.In the Land of Mordor where the Shadows lie."
+      },
+      {
+        "id": "18",
+        "question": "What forest creatures do Pippin and Merry come across?",
+        "answers":["Ents", "Elves"],
+        "correctAnswer": "Ents",
+        "difficultyLevel": "Intermediate",
+        "description": "Ents"
+      },
+      {
+        "id": "19",
+        "question": "What is it called when the Ents get together to decide something?",
+        "answers":["Entmoot", "Ent-o-moot"],
+        "correctAnswer": "Entmoot",
+        "difficultyLevel": "Intermediate",
+        "description": "Entmoot"
+      },
+      {
+        "id": "20",
+        "question": "Name the creatures sent by Sauron to find the Ring",
+        "answers":["Nazgul", "Uruk-hai"],
+        "correctAnswer": "Nazgul",
+        "difficultyLevel": "Intermediate",
+        "description": "Nazgul"
+      },
+      {
+        "id": "21",
+        "question": "The only way to destroy the Ring of Power is to throw it into the fires of?",
+        "answers":["Isengard", "Mount Doom", "Minas Tirith"],
+        "correctAnswer": "Mount Doom",
+        "difficultyLevel": "Intermediate",
+        "description": "Mount Doom"
+      },
+      {
+        "id": "22",
+        "question": "While traveling through the mines of Moria, which member of the Fellowship of the Ring is killed by the Balrog?",
+        "answers":["Boromir", "Gandalf", "Gimli"],
+        "correctAnswer": "Gandalf",
+        "difficultyLevel": "Intermediate",
+        "description": "Gandalf"
+      },
+      {
+        "id": "23",
+        "question": "In The Two Towers, who is Saruman's spy in Rohan?",
+        "answers":["Gimli", "Grima", "Gamling"],
+        "correctAnswer": "Grima",
+        "difficultyLevel": "Intermediate",
+        "description": "Grima"
+      },
+      {
+        "id": "24",
+        "question": "What is the name of the forest where Pippin and Merry have escaped into?",
+        "answers":["Fangorn Forest", "Hobbiton", "The Shire woods"],
+        "correctAnswer": "Fangorn Forest",
+        "difficultyLevel": "Intermediate",
+        "description": "Fangorn Forest"
+      }
+      
+  ]
+}
+
+
+

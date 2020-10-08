@@ -1,0 +1,117 @@
+
+{
+  "questions": [
+      {
+        "id": "1",
+        "question": "Gandalfs alias?",
+        "answers":["Mithrandir", "Olorin", "Both are correct"],
+        "correctAnswer": "Both are correct",
+        "difficultyLevel": "Advanced",
+        "description": "Both are correct"
+      },
+      {
+        "id": "2",
+        "question": "Who changes colour during ”The Two Towers”, from Grey to White?",
+        "answers":["Gandalf", "Galadriel", "Saruman],
+        "correctAnswer": " Gandalf",
+        "difficultyLevel": "Advanced",
+        "description": "Gandalf"
+      },
+      {
+        "id": "3",
+        "question": "Who possesses the ring of power at the start of the trilogy?",
+        "answers":["Gollum", "Bilbo", "Frodo"],
+        "correctAnswer": "Bilbo",
+        "difficultyLevel": "Advanced",
+        "description": "Bilbo"
+      },
+      {
+        "id": "4",
+        "question": "When the pass of Caradhras is blocked, where does Frodo say the fellowship should go?",
+        "answers":["Moria", "Celebdil", "Fanuidhol"],
+        "correctAnswer": "Moria",
+        "difficultyLevel": "Advanced",
+        "description": "Moria"
+      },
+      {
+        "id": "5",
+        "question": "Name Aragorn’s ancestor who failed to destroy the One Ring",
+        "answers":["Eldarion", "Isildur", "Sauron"],
+        "correctAnswer": "Isildur",
+        "difficultyLevel": "Advanced",
+        "description": "Isildur"
+      },
+      {
+        "id": "6",
+        "question": "Who is the steward of Gondor?",
+        "answers":["Boromir","Denethor", "Faramir"],
+        "correctAnswer": "Denethor",
+        "difficultyLevel": "Advanced",
+        "description": "Denethor"
+      },
+      {
+        "id": "7",
+        "question": "To whom does Pippin pledge allegiance?",
+        "answers":["Boromir", "Denethor", "Theoden"],
+        "correctAnswer": "Denethor",
+        "difficultyLevel": "Advanced",
+        "description": "Denethor"
+      },
+      {
+        "id": "8",
+        "question": "What is the name of Gandalf’s horse?",
+        "answers":["Balrog", "Shadowfax", "Galadriel"],
+        "correctAnswer": "Shadowfax",
+        "difficultyLevel": "Advanced",
+        "description": "Shadowfax"
+      },
+      {
+        "id": "9",
+        "question": "Where is Saruman’s tower, Orthanc, located?",
+        "answers":["Minas Tirith", "Isengard", "Hobbiton"],
+        "correctAnswer": " Isengard",
+        "difficultyLevel": "Advanced",
+        "description": " Isengard"
+      },
+      {
+        "id": "10",
+        "question": "What animal does Gollum give to Frodo?",
+        "answers":["A fish", "A rabbit", "A potato"],
+        "correctAnswer": "A rabbit",
+        "difficultyLevel": "Advanced",
+        "description": "A rabbit"
+      },
+      {
+        "id": "11",
+        "question": "Where does Théoden decide to send his people?",
+        "answers":["Helm’s deep", "Minas Tirith", "Rohan"],
+        "correctAnswer": "Helm’s deep",
+        "difficultyLevel": "Advanced",
+        "description": "Helm’s deep"
+      },
+      {
+        "id": "12",
+        "question": "What does Elrond offer to Aragorn?",
+        "answers":["A ring","A sword"],
+        "correctAnswer": "A sword",
+        "difficultyLevel": "Advanced",
+        "description": "A sword"
+      },
+      {
+        "id": "13",
+        "question": "How is the ring destroyed at Mount Doom?",
+        "answers":["It falls into lava", "It is destroyed by an Axe"],
+        "correctAnswer": "It falls into lava",
+        "difficultyLevel": "Advanced",
+        "description": "It falls into lava"
+      },
+      {
+        "id": "14",
+        "question": "In The Return of the King, who kills the Witch King?",
+        "answers":["Eowyn","Gandalf","Arwen"],
+        "correctAnswer": "Eowyn",
+        "difficultyLevel": "Advanced",
+        "description": "Eowyn"
+      }
+  ]
+}

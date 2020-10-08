@@ -1,0 +1,78 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "question": "How many 'Lord of the Rings' movie-parts exist?",
+      "answers":["One", "Two", "Three"],
+      "correctAnswer": "Three",
+      "difficultyLevel": "Basic",
+      "description": "The Fellowship of the Ring, The Two Towers, The Return of the King"
+    },
+    {
+      "id": "2",
+      "question": "What is the central plot element in 'The Lord of the Rings'?",
+      "answers":["Ring", "Sword", "Goblet"],
+      "correctAnswer": "Ring",
+      "difficultyLevel": "Basic",
+      "description": "The Ring of Power"
+    },
+    {
+      "id": "3",
+      "question": "What is the name of the fictional world in which characters live?",
+      "answers":["Planetopia", "Middle-earth", "Neverland"],
+      "correctAnswer": "Middle-earth",
+      "difficultyLevel": "Basic",
+      "description": "Middle-earth is the name of the fictional world"
+    },
+    {
+      "id": "4",
+      "question": "'The Lord of the Rings' is an novel written by:",
+      "answers":["Peter Jackson", "J.R.R. Tolkien", "Elijah Wood"],
+      "correctAnswer": "J.R.R. Tolkien",
+      "difficultyLevel": "Basic",
+      "description": "J.R.R. Tolkien"
+    },
+    {
+      "id": "5",
+      "question": "What is the main theme of 'The Lord of the Rings'?",
+      "answers":["Struggle between good and evil", "Seeking and finding love", "Secret society"],
+      "correctAnswer": "Struggle between good and evil",
+      "difficultyLevel": "Basic",
+      "description": "Struggle between good and evil"
+    },
+    {
+      "id": "6",
+      "question": "Who do the hobbits encounter at the Prancing Pony?",
+      "answers":["Strider", "Gandalf"],
+      "correctAnswer": "Strider",
+      "difficultyLevel": "Basic",
+      "description": "They encountered Strider"
+    },
+    {
+      "id": "7",
+      "question": "What is the name of the elf in the fellowship?",
+      "answers":["Legolas", "Elrond", "Boromir"],
+      "correctAnswer": "Legolas",
+      "difficultyLevel": "Basic",
+      "description": "Legolas is the name of the elf in the fellowship"
+    },
+    {
+      "id": "8",
+      "question": "What is the name of the dwarf in the fellowship?",
+      "answers":["Galadriel","Gimli", "Grima"],
+      "correctAnswer": "Gimli",
+      "difficultyLevel": "Basic",
+      "description": "Gimli is the name of the dwarf in the fellowship"
+    },
+    {
+      "id": "9",
+      "question": "Who has been following Sam and Frodo?",
+      "answers":["Boromir", "Gollum", "Pippin"],
+      "correctAnswer": "Gollum",
+      "difficultyLevel": "Basic",
+      "description": "Gollum has been following Sam and Frodo"
+    }
+  ]
+}
+
+

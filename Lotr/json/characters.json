@@ -1,0 +1,188 @@
+{
+  "character": [
+    {
+      "id": "000001",
+      "name": "Frodo",
+      "alias":[""],
+      "lastname": "Baggins",
+      "fullName": "Frodo Baggins",
+      "kind": "Hobbit",
+      "side": "Ally",
+      "urlToimage": "https://i.pinimg.com/736x/28/b9/8f/28b98f7cdce838278d683d3b809c8f1e.jpg",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "Ring bearer, hobbit of the Shire, inherits the One Ring from his cousin Bilbo, undertakes the quest to destroy the One Ring in the fires of Mount Doom in Mordor."
+    },
+    {
+      "id": "000002",
+      "name": "Bilbo",
+      "alias":[""],
+      "lastname": "Baggins",
+      "fullName": "Bilbo Baggins",
+      "kind": "Hobbit",
+      "side": "Ally",
+      "urlToimage": "",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "Hobbit in comfortable middle age, hired as a 'burglar', helps Thorin and his Dwarves to reclaim their homeland, which has been taken over by Smaug. Finds the One Ring"
+    },
+    {
+      "id": "000003",
+      "name": "Aragorn",
+      "alias":["Elessar", "Strider", "Telcontar", "Thorongil", "Estel"
+      ],
+      "lastname": "",
+      "fullName": "Aragorn II Elessar Telcontar",
+      "kind": "Man",
+      "side": "Ally",
+      "urlToimage": "https://vignette.wikia.nocookie.net/lotr/images/b/b6/Aragorn_profile.jpg/revision/latest/top-crop/width/360/height/450?cb=20170121121423",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": ["Andúril"],
+      "description": "Ranger of the North, heir of Isildur, King of Gondor, Gandalf's confidant and part of the quest to destroy the One Ring and defeat the Dark Lord Sauron. He fell in love with Arwen."
+    },
+    {
+      "id": "000004",
+      "name": "Arwen",
+      "alias":[""],
+      "lastname": "",
+      "fullName": "Arwen Undómiel",
+      "kind": "Elf",
+      "side": "Ally",
+      "urlToimage": "",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "Youngest child of Elrond and Celebrían, she bore the sobriquet 'Evenstar' (Evening Star), as the most beautiful of the last generation of High Elves in Middle-earth."
+    },
+    {
+      "id": "000005",
+      "name": "Boromir",
+      "alias":["Captain of the White Tower", "High Warden of the White Tower"],
+      "lastname": "",
+      "fullName": "Boromir",
+      "kind": "Man",
+      "side": "Ally",
+      "urlToimage": "https://vignette.wikia.nocookie.net/lotr/images/b/b4/Seanbean_boromir.jpg/revision/latest?cb=20110327195115",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "Heir of Denethor II, elder brother of Faramir, joined the Fellowship of the Ring, portrayed as a noble character who believed in the greatness of his kingdom and fought for it. His great stamina and physical strength, together with a forceful and commanding personality, made him a widely admired commander in Gondor's army and the favourite of his father Denethor. As a member of the Fellowship, his desperation to save his country ultimately drove him to betray his companions and attempt to seize the Ring, but he was redeemed by his repentance and brave last stand."
+    },
+    {
+      "id": "000006",
+      "name": "Gimli",
+      "alias":["Elf-friend", "Lockbearer", "Lord of the Glittering Caves"],
+      "lastname": "",
+      "fullName": "Gimli",
+      "kind": "Dwarf",
+      "side": "Ally",
+      "urlToimage": "https://vignette.wikia.nocookie.net/lotr/images/e/ec/Gimli_-_FOTR.png/revision/latest/top-crop/width/360/height/450?cb=20121008105956",
+      "weapons": [
+        "Helmet", "Axe"
+      ],
+      "weaponName": [""],
+      "description": "Dwarf warrior, son of Glóin, represent the race of Dwarves in the Fellowship of the Ring. In the course of the adventure, Gimli aids the Ring-bearer Frodo Baggins, participates in the War of the Ring, and becomes close friends with Legolas, overcoming an ancient enmity of Dwarves and Elves."
+    },
+    {
+      "id": "000007",
+      "name": "Legolas",
+      "alias":["Greenleaf"],
+      "lastname": "",
+      "fullName": "Legolas",
+      "kind": "Elf",
+      "side": "Ally",
+      "urlToimage": "https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Legolas600ppx.jpg/220px-Legolas600ppx.jpg",
+      "weapons": [
+        "Bow", "Arrow"
+      ],
+      "weaponName": [""],
+      "description": "Sindarin Elf, son of Thranduil (King of the Woodland Realm of Northern Mirkwood), one of the nine members of the Fellowship who set out to destroy the One Ring."
+    },
+    {
+      "id": "000008",
+      "name": "Gandalf",
+      "alias":["Mithrandir", "Tharkûn", "Olórin", "Incánus", "Bladorthin"],
+      "lastname": "",
+      "fullName": "Gandalf",
+      "kind": "Wizard",
+      "side": "Ally",
+      "urlToimage": "https://vignette.wikia.nocookie.net/lotr/images/8/8d/Gandalf-2.jpg/revision/latest?cb=20130209172436",
+      "weapons": [
+        "Sword", "Magic", "Staff"
+      ],
+      "weaponName": ["Glamdring"],
+      "description": "Wizard, leader of the Fellowship of the Ring. Sets out as 'Gandalf the Grey', possessing great knowledge, focused on the mission to counter Sauron, the Dark Lord. Associated with fire (his ring is the Ring of Fire, Narya)."
+    },
+    {
+      "id": "000009",
+      "name": "Merry",
+      "alias":["Merry", "Master of Buckland"],
+      "lastname": "Brandybuck",
+      "fullName": "Meriadoc Brandybuck",
+      "kind": "Hobbit",
+      "side": "Ally",
+      "urlToimage": "",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "One of the closest friends of Frodo. Merry, together with his friend Pippin, is a members of the Fellowship of the Ring, becomes separated from the rest of the group, hides in the forest of Fangorn, together with Pippin and Threebeard."
+    },
+    {
+      "id": "000010",
+      "name": "Pippin",
+      "alias":["Pippin", "Pip"],
+      "lastname": "Took",
+      "fullName": "Peregrin Took",
+      "kind": "Hobbit",
+      "side": "Ally",
+      "urlToimage": "https://vignette.wikia.nocookie.net/lotr/images/0/0a/Pippinprintscreen.jpg/revision/latest/top-crop/width/360/height/450?cb=20060310083048",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "One of the closest friends of Frodo. Pippin, together with his friend Merry, is a members of the Fellowship of the Ring, becomes separated from the rest of the group, hides in the forest of Fangorn, together with Merry and Threebeard."
+    },
+    {
+      "id": "000011",
+      "name": "Éowyn",
+      "alias":["Dernhelm"],
+      "lastname": "",
+      "fullName": "Éowyn",
+      "kind": "Man",
+      "side": "Ally",
+      "urlToimage": "",
+      "weapons": [
+        "Sword"
+      ],
+      "weaponName": [""],
+      "description": "Race: Rohirrim, Noblewoman and nice of Théoden of Rohan"
+    },
+    {
+      "id": "000012",
+      "name": "Gríma",
+      "alias":["Wormtongue", "Worm"],
+      "lastname": "",
+      "fullName": "Gríma Wormtongue",
+      "kind": "Man",
+      "side": "Both",
+      "urlToimage": "",
+      "weapons": [
+        "Words", "Poison"
+      ],
+      "weaponName": [""],
+      "description": "Pee in the shoe. Love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater) plan your travel. Attack like a vicious monster put butt in owner's face, sniff sniff, yet making bread on the bathrobe cat milk copy park pee walk owner escape bored tired cage droppings sick vet vomit stare out the window."
+    }
+  ]
+}
+
+
+
