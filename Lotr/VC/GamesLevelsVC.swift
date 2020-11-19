@@ -55,7 +55,7 @@ class GamesLevelsVC: UIViewController {
     let intermediateLabel: UILabel = {
         let label = UILabel()
         label.text = "Intermediate level"
-        label.textColor = .black
+        label.textColor = .darkGray
         label.font = UIFont(name: "Baskerville", size: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -74,7 +74,7 @@ class GamesLevelsVC: UIViewController {
     let advancedLabel: UILabel = {
         let label = UILabel()
         label.text = "Advanced level"
-        label.textColor = .black
+        label.textColor = .darkGray
         label.font = UIFont(name: "Baskerville", size: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         
@@ -92,12 +92,46 @@ class GamesLevelsVC: UIViewController {
     let expertLabel: UILabel = {
         let label = UILabel()
         label.text = "Expert level"
-        label.textColor = .black
+        label.textColor = .darkGray
         label.font = UIFont(name: "Baskerville", size: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
+    override func viewDidAppear(_ animated: Bool) {
+        let levelPassed = defaults.bool(forKey: "levelPassed")
+        let lastLevel = defaults.string(forKey: "lastLevel")
+        
+        if levelPassed == true {
+            if lastLevel == "Basic" {
+                intermediateView.layer.borderColor = UIColor.black.cgColor
+                intermediateView.isUserInteractionEnabled = true
+                intermediateLabel.textColor = .black
+            }
+            if lastLevel == "Intermediate" {
+                intermediateView.layer.borderColor = UIColor.black.cgColor
+                intermediateView.isUserInteractionEnabled = true
+                intermediateLabel.textColor = .black
+                
+                advancedView.layer.borderColor = UIColor.black.cgColor
+                advancedView.isUserInteractionEnabled = true
+                advancedLabel.textColor = .black
+            }
+            if lastLevel == "Advanced" {
+                intermediateView.layer.borderColor = UIColor.black.cgColor
+                intermediateView.isUserInteractionEnabled = true
+                intermediateLabel.textColor = .black
+                
+                advancedView.layer.borderColor = UIColor.black.cgColor
+                advancedView.isUserInteractionEnabled = true
+                advancedLabel.textColor = .black
+                
+                expertView.layer.borderColor = UIColor.black.cgColor
+                expertView.isUserInteractionEnabled = true
+                expertLabel.textColor = .black
+            }
+        }
+    }
     
     func setScreen(){
         //set basicView
@@ -114,8 +148,9 @@ class GamesLevelsVC: UIViewController {
         //set intermediateView
         intermediateView.frame = CGRect(x: 20, y: 200, width: self.view.frame.size.width - 30, height: 70)
         intermediateView.layer.cornerRadius = 10
-        intermediateView.layer.borderColor = UIColor.black.cgColor
+        intermediateView.layer.borderColor = UIColor.darkGray.cgColor
         intermediateView.layer.borderWidth = 0.5
+        intermediateView.isUserInteractionEnabled = false
         intermediateView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.openIntermediateQuiz(_:))))
         intermediateView.addSubview(intermediateLabel)
         
@@ -125,8 +160,9 @@ class GamesLevelsVC: UIViewController {
         //set advancedView
         advancedView.frame = CGRect(x: 20, y: 300, width: self.view.frame.size.width - 30, height: 70)
         advancedView.layer.cornerRadius = 10
-        advancedView.layer.borderColor = UIColor.black.cgColor
+        advancedView.layer.borderColor = UIColor.darkGray.cgColor
         advancedView.layer.borderWidth = 0.5
+        advancedView.isUserInteractionEnabled = false
         advancedView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.openAdvancedQuiz(_:))))
         advancedView.addSubview(advancedLabel)
         
@@ -136,8 +172,9 @@ class GamesLevelsVC: UIViewController {
         //set expertView
         expertView.frame = CGRect(x: 20, y: 400, width: self.view.frame.size.width - 30, height: 70)
         expertView.layer.cornerRadius = 10
-        expertView.layer.borderColor = UIColor.black.cgColor
+        expertView.layer.borderColor = UIColor.darkGray.cgColor
         expertView.layer.borderWidth = 0.5
+        expertView.isUserInteractionEnabled = false
         expertView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.openExpertQuiz(_:))))
         expertView.addSubview(expertLabel)
         

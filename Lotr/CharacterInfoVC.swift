@@ -28,10 +28,10 @@ class CharacterInfoVC: UIViewController {
     }
     
     lazy var scrollView: UIScrollView = {
-        let view = UIScrollView(frame:.zero)
+        let view = UIScrollView()//frame:.zero)
         view.backgroundColor = .clear
-        view.contentSize = contentView
-        view.frame = self.view.bounds
+        //view.contentSize = contentView
+        //view.frame = self.view.bounds
         return view
     }()
     
@@ -117,102 +117,23 @@ class CharacterInfoVC: UIViewController {
         label.text = ""
         label.textColor = .black
         label.numberOfLines = 0
+        label.textAlignment = .justified
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     /** Contains character image */
     let characterImage: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
+        let img = UIImage(named: "circle")
         let imgView = UIImageView(image:img!)
-        // imgView.contentMode = .scaleAspectFit
-        imgView.layer.cornerRadius = 100
+        imgView.contentMode = .scaleAspectFit
+        imgView.tintColor = .black
         imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
         
         imgView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         return imgView
     }()
-    
-    let characterImage2: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 25
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 0, y: 0, width: 15, height: 15)
-        return imgView
-    }()
-    
-    let characterImage3: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 30
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 50, y: 50, width: 15, height: 15)
-        return imgView
-    }()
-    
-    let characterImage4: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 35
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        return imgView
-    }()
-    
-    let characterImage5: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 40
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 50, y: 50, width: 20, height: 20)
-        return imgView
-    }()
-    
-    let characterImage6: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 25
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        return imgView
-    }()
-    
-    let characterImage7: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 25
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 50, y: 50, width: 20, height: 20)
-        return imgView
-    }()
-    
-    let characterImage8: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 25
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-        return imgView
-    }()
-    
-    let characterImage9: UIImageView = {
-        let img = UIImage(named: "lotr_eye")
-        let imgView = UIImageView(image:img!)
-        imgView.layer.cornerRadius = 25
-        imgView.layer.masksToBounds = true
-        imgView.contentMode = .scaleAspectFill
-        imgView.frame = CGRect(x: 50, y: 50, width: 20, height: 20)
-        return imgView
-    }()
+
     /**
      Fills character data into labels.
      
@@ -222,29 +143,24 @@ class CharacterInfoVC: UIViewController {
      */
     func fillData(){
         nameLabel.text = characterInfo!.name! + " " + (characterInfo?.lastname ?? "")
-        fullnameLabel.text = characterInfo?.fullName
+        fullnameLabel.text = "FULL NAME: " +  (characterInfo?.fullName ?? characterInfo!.name!)
         
         var aliases:String = ""
         var weaponsName: String = ""
         var weapons: [Weapons] = []
         
         //image
-        if characterInfo?.urlToimage != "" {
-            //create url
-            let url = URL(string:(characterInfo?.urlToimage)!)
-            
-            let d = URLSession.shared.dataTask(with: url!) { [weak self] (data, _, _) in
-                if let data = data {
-                    DispatchQueue.main.async {
-                        self?.characterImage.image = UIImage(data: data)
-                        self?.characterImage2.image = UIImage(data: data)
-                        self?.characterImage3.image = UIImage(data: data)
-                        self?.characterImage4.image = UIImage(data: data)
-                        self?.characterImage5.image = UIImage(data: data)
-                    }
-                }
-            }   
-            d.resume()
+        
+        let savedImage = retrieveImg(forKey: (characterInfo!.name)!,
+                                     inStorageType: .fileSystem)
+        //image should by now already exist localy. If not, return eye image
+        if savedImage != nil {
+            DispatchQueue.main.async {
+                self.characterImage.image = savedImage
+            }
+        }else{
+            self.characterImage.image = UIImage(named: "circle")
+            self.characterImage.tintColor = .black
         }
         
         //alias
@@ -253,7 +169,7 @@ class CharacterInfoVC: UIViewController {
                 if i == 0  { aliases = aliases + " " + element!}
                 else {aliases = aliases + ", " + element!}
             }
-            aliasLabel.text = "Alias: " + aliases
+            aliasLabel.text = "ALSO CALLED : " + aliases
             aliasLabel.isHidden = false
         }else{
             aliasLabel.isHidden = true
@@ -261,12 +177,12 @@ class CharacterInfoVC: UIViewController {
         
         //kind
         if characterInfo?.kind != nil {
-            kindLabel.text = "Kind: " + (characterInfo?.kind).map { $0.rawValue }!
+            kindLabel.text = "KIND: " + (characterInfo?.kind).map { $0.rawValue }!
         }
         
         //side
         if characterInfo?.side != nil {
-            sideLabel.text = "Side: " + (characterInfo?.side).map { $0.rawValue }!
+            sideLabel.text = "FIGHTS ON THE SIDE: " + (characterInfo?.side).map { $0.rawValue }!
         }
         
         //weapons
@@ -279,7 +195,7 @@ class CharacterInfoVC: UIViewController {
         if weapons.count > 0 {
             let weaponList = weapons.map{$0.rawValue}
             let weaponsJoined = weaponList.joined(separator: ", ")
-            weaponLabel.text = "Weapons: " + weaponsJoined
+            weaponLabel.text = "FIGHTS WITH: " + weaponsJoined
         }
         
         //weapons name
@@ -287,7 +203,7 @@ class CharacterInfoVC: UIViewController {
             for i in characterInfo!.weaponName {
                 weaponsName += i!
             }
-            weaponNameLabel.text = "[" +  weaponsName + "]"
+            weaponNameLabel.text = "WEAPONS NAMES: [" +  weaponsName + "]"
             weaponNameLabel.isHidden = false
         }else{
             weaponNameLabel.isHidden = true
@@ -297,6 +213,14 @@ class CharacterInfoVC: UIViewController {
         descriptionLabel.text = characterInfo?.description
     }
     
+    func setNavItems(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Quotes", style: .plain, target: self, action: #selector(openQuotes))
+    }
+    
+    @objc func openQuotes(){
+        print("OPEN QUOTES FROM CHARACTER")
+    }
+    
     /**Sets elements and their constraints
      */
     func setScreen(){
@@ -304,42 +228,42 @@ class CharacterInfoVC: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 219/255, green: 186/255, blue: 76/255, alpha: 1), NSAttributedString.Key.font: UIFont(name: "Baskerville", size: 20)!]
         self.navigationController?.title = characterInfo?.name
         
-        scrollView.frame = CGRect(x: 0, y: 450, width: self.view.frame.width, height: self.view.frame.height/2 - 100)
+        setNavItems()
+       // scrollView.frame = CGRect(x: 0, y: view.frame.height/2, width: self.view.frame.width, height: self.view.frame.height/2 - 100)
         
         view.addSubview(infoView)
         view.addSubview(scrollView)
         view.bringSubviewToFront(infoView)
         
         infoView.addSubview(characterImage)
-        infoView.addSubview(characterImage2)
-        infoView.addSubview(characterImage3)
-        infoView.addSubview(characterImage4)
-        infoView.addSubview(characterImage5)
-        
         infoView.addSubview(nameLabel)
         
         infoView.translatesAutoresizingMaskIntoConstraints = false
-        infoView.topAnchor.constraint(equalTo: safeArea.topAnchor).isActive = true
-        infoView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        infoView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        infoView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(>=20)-[v1]-(>=20)-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v1" : nameLabel]))
-        infoView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-260-[v1]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v1" : nameLabel]))
-        
         characterImage.translatesAutoresizingMaskIntoConstraints = false
-        characterImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        characterImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        characterImage.centerXAnchor.constraint(lessThanOrEqualTo: self.view.centerXAnchor).isActive = true
-        
-        characterImage2.frame = CGRect(x: self.view.frame.width/6, y: 0, width: 50, height: 50)
-        
-        characterImage3.frame = CGRect(x: self.view.frame.width/10, y: self.view.frame.height/18, width: 60, height: 60)
-        nameLabel.centerXAnchor.constraint(equalTo: self.infoView.centerXAnchor).isActive = true
-        
-        characterImage4.frame = CGRect(x: self.view.frame.width/10, y: self.view.frame.height/8, width: 70, height: 70)
-        nameLabel.centerXAnchor.constraint(equalTo: self.infoView.centerXAnchor).isActive = true
-        
-        characterImage5.frame = CGRect(x: self.view.frame.width/5, y: self.view.frame.height/5.1, width: 75, height: 75)
-               nameLabel.centerXAnchor.constraint(equalTo: self.infoView.centerXAnchor).isActive = true
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+      
+        NSLayoutConstraint.activate([
+            infoView.topAnchor.constraint(equalTo: safeArea.topAnchor),
+            infoView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            infoView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            
+            characterImage.topAnchor.constraint(equalTo: infoView.topAnchor),
+            //characterImage.leftAnchor.constraint(equalTo: view.leftAnchor, constant:  10),
+            //characterImage.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10),
+            characterImage.widthAnchor.constraint(equalToConstant: 200),
+            characterImage.heightAnchor.constraint(equalToConstant: 200),
+            characterImage.centerXAnchor.constraint(lessThanOrEqualTo: self.view.centerXAnchor),
+            
+            nameLabel.topAnchor.constraint(equalTo: characterImage.bottomAnchor, constant: 10),
+            nameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            scrollView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 10),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+           
+
+        ])
         
         //scroll view
         scrollView.addSubview(masterView)
@@ -354,8 +278,18 @@ class CharacterInfoVC: UIViewController {
         masterView.addSubview(weaponNameLabel)
         masterView.addSubview(descriptionLabel)
         
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            descriptionLabel.bottomAnchor.constraint(equalTo:scrollView.bottomAnchor, constant: -20),
+            descriptionLabel.leadingAnchor.constraint(equalTo: scrollView.readableContentGuide.leadingAnchor),
+            descriptionLabel.rightAnchor.constraint(equalTo: scrollView.readableContentGuide.rightAnchor)
+        ])
+        
+        
         masterView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[v2]-10-[v3]-10-[v4]-10-[v5]-10-[v6]-10-[v7]-10-[v8]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v2": fullnameLabel, "v3": aliasLabel, "v4": kindLabel, "v5": sideLabel, "v6": weaponLabel,"v7": weaponNameLabel,"v8": descriptionLabel]))
         
+        masterView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-30-[v2]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v2" : fullnameLabel]))
         masterView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-30-[v3]-30-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v3" : aliasLabel]))
         masterView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-30-[v4]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v4" : kindLabel]))
         masterView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-30-[v5]", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v5" : sideLabel]))
@@ -364,7 +298,7 @@ class CharacterInfoVC: UIViewController {
         masterView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-30-[v8]-20-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["v8" : descriptionLabel]))
         
         
-        fullnameLabel.centerXAnchor.constraint(equalTo: self.masterView.centerXAnchor).isActive = true
+        //fullnameLabel.centerXAnchor.constraint(equalTo: self.masterView.centerXAnchor).isActive = true
         
     }
 }

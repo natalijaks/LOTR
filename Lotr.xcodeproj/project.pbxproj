@@ -23,13 +23,19 @@
 		A3672C182487D9A3005146B9 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3672C172487D9A3005146B9 /* PlacesVC.swift */; };
 		A3672C1A2488DA39005146B9 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3672C192488DA39005146B9 /* Characters.swift */; };
 		A3672C2C24910B66005146B9 /* CharactersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3672C2B24910B66005146B9 /* CharactersCell.swift */; };
+		A37D90C02542C9AF00ADB72B /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D90BF2542C9AF00ADB72B /* UIImageView.swift */; };
+		A37D90C32546F88E00ADB72B /* LocalSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D90C22546F88E00ADB72B /* LocalSave.swift */; };
+		A37D90CC255D3EDF00ADB72B /* SongsPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D90CB255D3EDF00ADB72B /* SongsPVC.swift */; };
+		A37D90D1255D489B00ADB72B /* SongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D90D0255D489B00ADB72B /* SongsVC.swift */; };
+		A37D90DB255D810A00ADB72B /* SauronsTheme.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A37D90D8255D71F900ADB72B /* SauronsTheme.m4a */; };
+		A37D90DD255D811000ADB72B /* RingTheme.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A37D90D7255D71F200ADB72B /* RingTheme.m4a */; };
+		A37D90E1255D89D100ADB72B /* Songs2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37D90E0255D89D100ADB72B /* Songs2VC.swift */; };
 		A389EB83249B5A52009D3FA5 /* characters.json in Resources */ = {isa = PBXBuildFile; fileRef = A389EB82249B5A52009D3FA5 /* characters.json */; };
 		A389EB85249B5D24009D3FA5 /* ReusableFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A389EB84249B5D24009D3FA5 /* ReusableFunctions.swift */; };
 		A389EB87249BF220009D3FA5 /* CharacterInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A389EB86249BF220009D3FA5 /* CharacterInfoVC.swift */; };
 		A3AC0F7724F68CA700974FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3AC0F7624F68CA700974FA0 /* Assets.xcassets */; };
 		A3C47B4C247E9EE80088478E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C47B4B247E9EE80088478E /* AppDelegate.swift */; };
 		A3C47B4E247E9EE80088478E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C47B4D247E9EE80088478E /* SceneDelegate.swift */; };
-		A3C47B55247E9EE90088478E /* IMAGE 2020-05-27 16:08:47.png in Resources */ = {isa = PBXBuildFile; fileRef = A3C47B54247E9EE90088478E /* IMAGE 2020-05-27 16:08:47.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +55,13 @@
 		A3672C172487D9A3005146B9 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
 		A3672C192488DA39005146B9 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		A3672C2B24910B66005146B9 /* CharactersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCell.swift; sourceTree = "<group>"; };
+		A37D90BF2542C9AF00ADB72B /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		A37D90C22546F88E00ADB72B /* LocalSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSave.swift; sourceTree = "<group>"; };
+		A37D90CB255D3EDF00ADB72B /* SongsPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SongsPVC.swift; path = Lotr/VC/SongsPVC.swift; sourceTree = SOURCE_ROOT; };
+		A37D90D0255D489B00ADB72B /* SongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsVC.swift; sourceTree = "<group>"; };
+		A37D90D7255D71F200ADB72B /* RingTheme.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = RingTheme.m4a; sourceTree = "<group>"; };
+		A37D90D8255D71F900ADB72B /* SauronsTheme.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = SauronsTheme.m4a; sourceTree = "<group>"; };
+		A37D90E0255D89D100ADB72B /* Songs2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs2VC.swift; sourceTree = "<group>"; };
 		A389EB82249B5A52009D3FA5 /* characters.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = characters.json; sourceTree = "<group>"; };
 		A389EB84249B5D24009D3FA5 /* ReusableFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableFunctions.swift; sourceTree = "<group>"; };
 		A389EB86249BF220009D3FA5 /* CharacterInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterInfoVC.swift; path = Lotr/CharacterInfoVC.swift; sourceTree = SOURCE_ROOT; };
@@ -56,7 +69,6 @@
 		A3C47B48247E9EE80088478E /* Lotr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3C47B4B247E9EE80088478E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3C47B4D247E9EE80088478E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A3C47B54247E9EE90088478E /* IMAGE 2020-05-27 16:08:47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "IMAGE 2020-05-27 16:08:47.png"; path = "Assets.xcassets/lotr_title.imageset/IMAGE 2020-05-27 16:08:47.png"; sourceTree = "<group>"; };
 		A3C47B59247E9EE90088478E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +109,7 @@
 			children = (
 				A36547C024C042D9009E3399 /* UIColor.swift */,
 				A365481C24F16EBF009E3399 /* UILabel.swift */,
+				A37D90BF2542C9AF00ADB72B /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -106,6 +119,7 @@
 			children = (
 				A35C551724A61FAA0015B7E6 /* Questions.swift */,
 				A3672C192488DA39005146B9 /* Characters.swift */,
+				A37D90C22546F88E00ADB72B /* LocalSave.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -113,15 +127,35 @@
 		A3672C2A24910837005146B9 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				A37D90DF255D89B600ADB72B /* Song */,
 				A35C550F24A485010015B7E6 /* SettingsVC.swift */,
 				A35C551124A490FB0015B7E6 /* GamesVC.swift */,
 				A35C551C24AA00380015B7E6 /* GamesLevelsVC.swift */,
+				A37D90CB255D3EDF00ADB72B /* SongsPVC.swift */,
 				A35C551324A6085F0015B7E6 /* QuizVC.swift */,
 				A389EB86249BF220009D3FA5 /* CharacterInfoVC.swift */,
 				A3672C152487D994005146B9 /* CharactersVC.swift */,
 				A3672C172487D9A3005146B9 /* PlacesVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		A37D90D3255D65A900ADB72B /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				A37D90D8255D71F900ADB72B /* SauronsTheme.m4a */,
+				A37D90D7255D71F200ADB72B /* RingTheme.m4a */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		A37D90DF255D89B600ADB72B /* Song */ = {
+			isa = PBXGroup;
+			children = (
+				A37D90D0255D489B00ADB72B /* SongsVC.swift */,
+				A37D90E0255D89D100ADB72B /* Songs2VC.swift */,
+			);
+			path = Song;
 			sourceTree = "<group>";
 		};
 		A3C47B3F247E9EE70088478E = {
@@ -143,17 +177,17 @@
 		A3C47B4A247E9EE80088478E /* Lotr */ = {
 			isa = PBXGroup;
 			children = (
-				A389EB84249B5D24009D3FA5 /* ReusableFunctions.swift */,
-				A35C552624AB2D150015B7E6 /* Extensions */,
-				A35C551A24A9C7A20015B7E6 /* Cells */,
-				A35C551924A9C7200015B7E6 /* json */,
-				A3672C2A24910837005146B9 /* VC */,
-				A3672C2924910828005146B9 /* Models */,
-				A3C47B4B247E9EE80088478E /* AppDelegate.swift */,
-				A3C47B4D247E9EE80088478E /* SceneDelegate.swift */,
-				A3C47B54247E9EE90088478E /* IMAGE 2020-05-27 16:08:47.png */,
 				A3C47B59247E9EE90088478E /* Info.plist */,
+				A3C47B4B247E9EE80088478E /* AppDelegate.swift */,
+				A389EB84249B5D24009D3FA5 /* ReusableFunctions.swift */,
+				A3C47B4D247E9EE80088478E /* SceneDelegate.swift */,
 				A3AC0F7624F68CA700974FA0 /* Assets.xcassets */,
+				A35C551A24A9C7A20015B7E6 /* Cells */,
+				A35C552624AB2D150015B7E6 /* Extensions */,
+				A35C551924A9C7200015B7E6 /* json */,
+				A3672C2924910828005146B9 /* Models */,
+				A37D90D3255D65A900ADB72B /* Music */,
+				A3672C2A24910837005146B9 /* VC */,
 			);
 			path = Lotr;
 			sourceTree = "<group>";
@@ -216,10 +250,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37D90DD255D811000ADB72B /* RingTheme.m4a in Resources */,
+				A37D90DB255D810A00ADB72B /* SauronsTheme.m4a in Resources */,
 				A35C552324AA2A2B0015B7E6 /* questionsAdvanced.json in Resources */,
 				A35C552524AA2A420015B7E6 /* questionsExpert.json in Resources */,
 				A35C551624A61E740015B7E6 /* questionsBasic.json in Resources */,
-				A3C47B55247E9EE90088478E /* IMAGE 2020-05-27 16:08:47.png in Resources */,
 				A3AC0F7724F68CA700974FA0 /* Assets.xcassets in Resources */,
 				A389EB83249B5A52009D3FA5 /* characters.json in Resources */,
 				A31E84412523BA46001D8307 /* dummi.json in Resources */,
@@ -238,15 +273,20 @@
 				A36547C124C042DB009E3399 /* UIColor.swift in Sources */,
 				A3672C2C24910B66005146B9 /* CharactersCell.swift in Sources */,
 				A389EB87249BF220009D3FA5 /* CharacterInfoVC.swift in Sources */,
+				A37D90CC255D3EDF00ADB72B /* SongsPVC.swift in Sources */,
 				A3672C162487D994005146B9 /* CharactersVC.swift in Sources */,
 				A35C551424A6085F0015B7E6 /* QuizVC.swift in Sources */,
 				A35C551224A490FB0015B7E6 /* GamesVC.swift in Sources */,
 				A3C47B4E247E9EE80088478E /* SceneDelegate.swift in Sources */,
+				A37D90C02542C9AF00ADB72B /* UIImageView.swift in Sources */,
+				A37D90E1255D89D100ADB72B /* Songs2VC.swift in Sources */,
 				A3672C182487D9A3005146B9 /* PlacesVC.swift in Sources */,
 				A35C551D24AA00380015B7E6 /* GamesLevelsVC.swift in Sources */,
 				A365481D24F16EBF009E3399 /* UILabel.swift in Sources */,
 				A389EB85249B5D24009D3FA5 /* ReusableFunctions.swift in Sources */,
+				A37D90D1255D489B00ADB72B /* SongsVC.swift in Sources */,
 				A35C551824A61FAA0015B7E6 /* Questions.swift in Sources */,
+				A37D90C32546F88E00ADB72B /* LocalSave.swift in Sources */,
 				A3672C1A2488DA39005146B9 /* Characters.swift in Sources */,
 				A35C551024A485010015B7E6 /* SettingsVC.swift in Sources */,
 			);

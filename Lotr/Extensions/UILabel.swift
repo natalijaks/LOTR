@@ -17,4 +17,20 @@ extension UILabel {
         self.layer.shadowOffset = CGSize(width: 1, height: 2)
         //self.layer.shadowColor = UIColor.purple.cgColor
     }
+    
+    func pointsBlinkStart(){
+        UIView.animate(withDuration: 0.4, delay: 0,
+                       options: .transitionFlipFromLeft,
+                       animations: {
+                        self.textColor = UIColor.yellow
+                        self.font = UIFont(name: "Baskerville", size: 25)
+                       },
+                       completion: nil)
+    }
+    
+    func pointsBlinkStop(){
+        layer.removeAllAnimations()
+        self.textColor =  UIColor.darkGray
+        self.font = UIFont(name: "Baskerville", size: 20)
+    }
 }

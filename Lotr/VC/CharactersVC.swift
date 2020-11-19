@@ -39,7 +39,9 @@ class CharactersVC: UIViewController, UITableViewDelegate {
         tblCharacters.delegate = self
         
         setupTable()
-        getData()
+        getData{
+            self.tblCharacters.reloadData()
+        }
         setupSearchController()
         
         //title
@@ -70,7 +72,7 @@ class CharactersVC: UIViewController, UITableViewDelegate {
      Fetching data from json and append it to characters array.
      - Registering the cell CharactersCell, so it can be used.
      */
-    func getData(){
+    func getData(completed: @escaping () -> ()){
         
         tblCharacters.register(CharactersCell.self, forCellReuseIdentifier: "charactersCell")
         tblCharacters.dataSource = self
@@ -83,7 +85,9 @@ class CharactersVC: UIViewController, UITableViewDelegate {
                 result.character.forEach { element in
                     characters.append(element)
                 }
-                tblCharacters.reloadData()
+                DispatchQueue.main.async {
+                    completed()
+                }
                 
             } catch {
                 print(error)
@@ -116,38 +120,61 @@ extension CharactersVC: UITableViewDataSource {
             cell.nameLabel.text = filteredCharacters[indexPath.item].name
             cell.lastnameLabel.text = filteredCharacters[indexPath.item].lastname
             
-             //image
-            if filteredCharacters[indexPath.item].urlToimage != "" {
-                //create url
-                let url = URL(string:(filteredCharacters[indexPath.item].urlToimage)!)
-                //fetch data with URLSession
-                let d = URLSession.shared.dataTask(with: url!) { (data, _, _) in
-                    if let data = data {
-                        DispatchQueue.main.async { cell.characterImage.image = UIImage(data: data) }
-                    }
-                }
-                d.resume()
+            if let savedImage = retrieveImg(forKey: (self.filteredCharacters[indexPath.item].name)!,
+                                            inStorageType: .fileSystem) {
+                cell.characterImage.image = savedImage
+                
             }else{
-                cell.characterImage.image = UIImage(named: "lotr_eye")
+                    cell.characterImage.image = UIImage(named: "lotr_eye")
             }
+            
         }else{
             cell.nameLabel.text = characters[indexPath.item].name
             cell.lastnameLabel.text = characters[indexPath.item].lastname
             
-            if characters[indexPath.item].urlToimage != "" {
-                //create url
-                let url = URL(string:(characters[indexPath.item].urlToimage)!)
-                //fetch data with URLSession
-                let d = URLSession.shared.dataTask(with: url!) { (data, _, _) in
-                    if let data = data {
-                        DispatchQueue.main.async {
-                            cell.characterImage.image = UIImage(data: data)
+            let savedImage = retrieveImg(forKey: (self.characters[indexPath.item].name)!,
+                                         inStorageType: .fileSystem)
+            //check if image exist localy, return
+            if savedImage != nil {
+                DispatchQueue.main.async {
+                    cell.characterImage.image = savedImage
+                }
+                //else get it from url using URLSession
+            }else {
+                if self.characters[indexPath.item].urlToimage != "" {
+                    //create url
+                    let url = URL(string:(self.characters[indexPath.item].urlToimage)!)
+                    //fetch data with URLSession
+                    let d = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+                        if error != nil {
+                            print("Error:", error as Any)
+                            return
+                        }
+                        
+                        guard let httpResponse = response as? HTTPURLResponse,
+                              (200...299).contains(httpResponse.statusCode) else {
+                            print("Response error:", response!)
+                            return
+                        }
+                        
+                        if let data = data {
+                            if self.characters[indexPath.item].name != "" {
+                                store(image: UIImage(data: data)!,
+                                      forKey: self.characters[indexPath.item].name!,
+                                      withStorageType: .fileSystem)
+                            }
+                            DispatchQueue.main.async {
+                                cell.characterImage.image = UIImage(data: data)
+                            }
                         }
                     }
+                    d.resume()
+                }else{
+                    DispatchQueue.main.async {
+                        cell.characterImage.image = UIImage(named: "circle")
+                        cell.characterImage.tintColor = .black
+                    }
                 }
-                d.resume()
-            }else{
-                cell.characterImage.image = UIImage(named: "lotr_eye")
             }
         }
         return cell
@@ -176,6 +203,7 @@ extension CharactersVC: UITableViewDataSource {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Searching for..."
         searchController.searchBar.tintColor = UIColor.yellow
+        searchController.searchBar.barStyle = .black
         searchController.hidesNavigationBarDuringPresentation = true
 
         navigationItem.searchController = searchController

@@ -29,6 +29,9 @@ class QuizVC: UIViewController {
         
         //set nav text color and font
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.txtColorYellow, NSAttributedString.Key.font: UIFont(name: "Baskerville", size: 20)!]
+        self.title =  "0 / " + String(difficultyLevelNumQuestions)
+        
+        
         safeArea = view.layoutMarginsGuide
         
         //left "back" button
@@ -145,6 +148,7 @@ class QuizVC: UIViewController {
      Sets elements on screen, defines constraints and subviews
      */
     func setScreen(){
+        
         //set points view
         pointsView.frame = CGRect(x: 20, y: 150, width: self.view.frame.size.width - 30, height: 70)
         pointsView.layer.cornerRadius = 10
@@ -201,7 +205,6 @@ class QuizVC: UIViewController {
         if levelPicked == Level.Expert {jsonName = "questionsExpert"}
         
         if let localJSONdata = ReusableFunctions.shared.readLocalJSONFile(name: jsonName){
-            print("RES:1")
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             do {
@@ -259,11 +262,20 @@ class QuizVC: UIViewController {
                 answer3Btn.setTitle(answers[2], for: .normal)
             }
         }else{
+            var alert = UIAlertController()
+            if levelPicked.rawValue != "Expert" {
+                alert = UIAlertController(title: "Level completed", message: "You completed the " + levelPicked.rawValue + " level. Choose an other quest level.", preferredStyle: .alert)
+                defaults.setValue(true, forKey: "levelPassed")
+                defaults.setValue(levelPicked.rawValue, forKey: "lastLevel")
+            }else{
+                alert = UIAlertController(title: "Level completed", message: "You completed the " + levelPicked.rawValue + " level. You have finished the quest", preferredStyle: .alert)
+            }
             
-            let alert = UIAlertController(title: "Level completed", message: "You completed level" + levelPicked.rawValue + ". Do you want to continue playing the quiz?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {  action in
                 //TODO:
+                self.navigationController?.popViewController(animated: true)
+                
             }))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {  action in   self.navigationController?.popViewController(animated: true) }))
             
@@ -300,9 +312,13 @@ class QuizVC: UIViewController {
             if sender.tag == 2 { answer2Btn.backgroundColor = UIColor.transparentGreen }
             if sender.tag == 3 { answer3Btn.backgroundColor = UIColor.transparentGreen }
             points += 10
+            pointsLabel.pointsBlinkStart()
             pointsLabel.text = "Points: " + String(points)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.title =  String(points/10) + " / " + String(difficultyLevelNumQuestions)
+            //pointsLabel.pointsBlinkStop()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
                 self.setQuestions()
+                self.pointsLabel.pointsBlinkStop()
             })
         }
         else {
@@ -311,7 +327,7 @@ class QuizVC: UIViewController {
             if sender.tag == 3 { answer3Btn.backgroundColor = UIColor.transparentRed}
             
             print("GAME OVER")
-            let alert = UIAlertController(title: "End of the journey", message: "The correct answer would be:\n" + descAnswer + "\nYou have failed the quest. Do you want to start a new quest?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "End of the journey", message: "The correct answer would be:\n" + descAnswer + "\n\nYou have failed the quest. Do you want to start a new quest?", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
                 action in
@@ -319,6 +335,7 @@ class QuizVC: UIViewController {
                 self.setQuestions()
                 self.points = 0
                 self.pointsLabel.text = "Points: " + String(self.points)
+                self.title =  String(self.points/10) + " / " + String(self.difficultyLevelNumQuestions)
             }))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: {
                 action in

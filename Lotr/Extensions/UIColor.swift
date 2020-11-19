@@ -21,6 +21,7 @@ extension UIColor {
     static let txtColorYellow = UIColor(red: 219/255, green: 186/255, blue: 76/255, alpha: 1)
     
     static let btnDarkBrown = UIColor(red: 129/255, green: 96/255, blue: 30/255, alpha: 1)
+    static let mapBackground = UIColor(red: 177/255, green: 163/255, blue: 151/255, alpha: 1)
    
 }
 

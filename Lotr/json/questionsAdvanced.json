@@ -13,7 +13,7 @@
         "id": "2",
         "question": "Who changes colour during ”The Two Towers”, from Grey to White?",
         "answers":["Gandalf", "Galadriel", "Saruman],
-        "correctAnswer": " Gandalf",
+        "correctAnswer": "Gandalf",
         "difficultyLevel": "Advanced",
         "description": "Gandalf"
       },

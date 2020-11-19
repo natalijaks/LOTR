@@ -54,6 +54,7 @@ enum Kind: String, Codable {
     case Wizard = "Wizard"
     case Balrog = "Balrog"
     case Ringwraith = "Ringwraith"
+    case Maia = "Maia"
     case Other = "Other kind"
 }
 

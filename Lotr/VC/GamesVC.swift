@@ -124,7 +124,7 @@ class GamesVC: UIViewController {
         songView.layer.cornerRadius = 10
         songView.layer.borderColor = UIColor.black.cgColor
         songView.layer.borderWidth = 0.5
-        
+        songView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.openSongGame(_:))))
         songView.addSubview(songLabel)
         songView.addSubview(songLabelM)
         
@@ -144,4 +144,11 @@ class GamesVC: UIViewController {
         let vc = GamesLevelsVC()
         self.navigationController?.pushViewController(vc, animated: false)
     }
+    
+    @objc func openSongGame(_ sender: UITapGestureRecognizer? = nil){
+        let vc = SongsPVC()
+        self.navigationController?.pushViewController(vc, animated: false)
+        
+    }
+    
 }

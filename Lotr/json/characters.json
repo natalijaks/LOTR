@@ -164,7 +164,7 @@
         "Sword"
       ],
       "weaponName": [""],
-      "description": "Race: Rohirrim, Noblewoman and nice of Théoden of Rohan"
+      "description": "Race: Rohirrim, Noblewoman and nice of Théoden of Rohan, who calls herself a shieldmaiden.\n\nWhen Théoden's mind is poisoned by his corrupt adviser Gríma Wormtongue, Éowyn is obliged to care for her uncle, and his deterioration pains her deeply.\nÉowyn falls in love with Aragorn, but though he respects her, he does not return her feelings, as he is betrothed to the elf Arwen.\nAs Aragorn points out,her duty is with her people; she has to shoulder the responsibility of ruling Rohan in Théoden's stead when the war-host of Rohan go to war.\nWith the hobbit Merry Brandybuck, she rides into battle of the Pelennor Fields, confronts the Witch-King of Angmar, Lord of the Nazgûl and kills him. There she meets Faramir, with whom she soon falls in love."
     },
     {
       "id": "000012",
@@ -180,6 +180,36 @@
       ],
       "weaponName": [""],
       "description": "Pee in the shoe. Love and coo around boyfriend who purrs and makes the perfect moonlight eyes so i can purr and swat the glittery gleaming yarn to him (the yarn is from a $125 sweater) plan your travel. Attack like a vicious monster put butt in owner's face, sniff sniff, yet making bread on the bathrobe cat milk copy park pee walk owner escape bored tired cage droppings sick vet vomit stare out the window."
+    },
+    {
+      "id": "000013",
+      "name": "Gollum",
+      "alias":["Sméagol", "Stinker", "Trahald"],
+      "lastname": "",
+      "fullName": "",
+      "kind": "Hobbit",
+      "side": "Villain",
+      "urlToimage": "",
+      "weapons": [
+        "Words"
+      ],
+      "weaponName": [""],
+      "description": "Originally known as Sméagol, he was corrupted by the One Ring and later named Gollum after his habit of making 'a horrible swallowing noise in his throat'."
+    },
+    {
+      "id": "000014",
+      "name": "Sauron",
+      "alias":[""],
+      "lastname": "",
+      "fullName": "",
+      "kind": "Maia",
+      "side": "Villain",
+      "urlToimage": "",
+      "weapons": [
+        "Words"
+      ],
+      "weaponName": [""],
+      "description": "Sauron is the main antagonist, through the forging of the One Ring where he rules the land of Mordor and has the ambition of ruling the whole of Middle-earth. Sauron appears most often as 'the Eye', as if disembodied."
     }
   ]
 }
